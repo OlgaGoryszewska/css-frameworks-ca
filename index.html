@@ -31,8 +31,8 @@
          
           <p class="text-light mt-4 text-center">or register</p>
 
-          <form onsubmit="return validateEmail()"
-        class="row justify-content-center" method="post" action="auth/register" id="registerForm">
+          <form
+        class="row justify-content-center" required pattern="[\w]+" title="Username must not contain punctuation symbols apart from underscore (_)." id="registerForm">
 
           <label for="name" class="form-label text-light mt-4">Name</label>
           <input
