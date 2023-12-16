@@ -10,14 +10,3 @@ $green: #198754;
 $teal: #20c997;
 $cyan: #0dcaf0;
 // scss-docs-end color-variables
-
-:root {
-  --bs-body-font-family: "poppins";
-}
-
-body {
-  background-image: url("../../img/coding-owl-background-img-transparent.png");
-  background-color: $blue;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
