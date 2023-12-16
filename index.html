@@ -32,25 +32,26 @@
           <p class="text-light mt-4 text-center">or register</p>
 
           <form
-        class="row justify-content-center" required pattern="[\w]+" title="Username must not contain punctuation symbols apart from underscore (_)." id="registerForm">
+        class="row justify-content-center" id="registerForm">
 
           <label for="name" class="form-label text-light mt-4">Name</label>
           <input
             type="text"
             name="name"
             class="form-control"
-            id="name"  required title="The name value must not contain punctuation symbols apart from underscore (_)."
+            id="name"  required pattern="[\w]+"title="The name value must not contain punctuation symbols apart from underscore (_)."
            
             
           />
 
           <label for="email" class="form-label text-light mt-4">Email</label>
-          <input type="email" class="form-control" id="email" name="Email" required
+          <input type="email" class="form-control" id="email" name="Email" required pattern=".+@(stud\.noroff\.no|noroff\.no)" title="Email must be a valid stud.noroff.no or noroff.no email address.">
+          <br>
           />
           <label for="password" class="form-label text-light mt-4"
             >Password:</label
           >
-          <input type="password" class="form-control" id="password"  required minlength="8" 
+          <input type="password" class="form-control" id="password"  required title="Password must be at least 8 characters." minlength="8" 
           />
           <button type="submit" value="Register" class="btn btn-primary mb-4 mt-4">Register</button>
           </form>
