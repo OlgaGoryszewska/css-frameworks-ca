@@ -1,21 +1,20 @@
 import { REGISTER_API_URL } from "../constants.mjs";
 
+const method = "post";
+
 export async function register(profile) {
-  try {
-    const response = await fetch(REGISTER_API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(profile),
-    });
+  const registerURL = REGISTER_API_URL;
+  const body = JSON.stringify(profile);
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.message || "Registration failed");
-    }
+  const response = await fetch(registerURL, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method,
+    body,
+  });
 
-    return await response.json();
-  } catch (error) {
-    console.error("Registration error:", error);
-    throw error;
-  }
+  const result = await response.json();
+  console.log(result);
+  console.log("Profile data to send:", profile);
 }
