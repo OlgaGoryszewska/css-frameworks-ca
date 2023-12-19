@@ -1,4 +1,5 @@
 import { LOGIN_API_URL } from "../constants.mjs";
+import * as storage from "../../handlers/storage/index.mjs";
 
 const method = "post";
 
@@ -15,6 +16,10 @@ export async function login(profile) {
   });
 
   const result = await response.json();
-  console.log(result);
-  console.log("Profile data to send:", profile);
+
+  storage.save("token", result.accessToken);
+
+  storage.save("profile", result);
+
+  alert("Congratulations! You are now logged in");
 }
