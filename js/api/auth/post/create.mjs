@@ -5,12 +5,18 @@ import { authFetch } from "./authFetch.mjs";
 export async function createPost(postData) {
   const createPostURL = POSTS_API_URL;
 
-  const response = await authFetch(createPostURL, {
-    method: "post",
-    body: JSON.stringify(postData),
-  });
+  try {
+    const response = await authFetch(createPostURL, {
+      method: "post",
+      body: JSON.stringify(postData),
+    });
 
-  const post = await response.json();
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
-  console.log(post);
+    return await response.json();
+  } catch (error) {
+    console.error("Error creating post:", error);
+  }
 }
