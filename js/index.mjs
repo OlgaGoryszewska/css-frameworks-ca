@@ -14,4 +14,4 @@ if (path === "/login/login.html") {
 //post.updatePost();
 //post.removePost();
 //post.getPost();
-post.getPosts().then(console.log);
+post.getPost(9613).then(console.log);
