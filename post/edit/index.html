@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Owl ⎢ Post ⎢ Edit</title>
-    <link rel="stylesheet" href="dist/css/index.css" />
+    <link rel="stylesheet" href="../../dist/css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,59 +42,32 @@
     </header>
     <div class="container mt-4">
       <div class="col-md-6">
-        <img
-          class="img-fluid mb-4 img-thumbnail"
-          src="img/coding-owl-background-img.png"
-          alt="coding owl"
-        />
+       
+        <p class="text-light mt-4 text-center">Create a new post</p>
+        
 
-        <p class="text-light mt-4 text-center">Register a new user</p>
-        <form class="row justify-content-center" id="registerForm">
-          <!-- Name field -->
-          <label for="name" class="form-label text-light mt-4">Name:</label>
-          <input
-            type="text"
-            name="name"
-            class="form-control"
-            required
-            pattern="\w*[_]?\w*"
-            title="The name must not contain punctuation symbols apart from underscore (_)"
-          />
+          <label for="title" class="form-label text-light mt-4"
+            >Title:</label>
 
-          <label for="email" class="form-label text-light mt-4">Email:</label>
-          <input
-            type="email"
-            class="form-control"
-            name="email"
-            required
-            pattern=".+@(stud\.noroff\.no|noroff\.no)"
-            title="Email must be a valid stud.noroff.no or noroff.no email address"
-          />
+          <input type="text" class="form-control"  name="title" required maxlength="100" />
 
-          <label for="password" class="form-label text-light mt-4"
-            >Password:</label
-          >
-          <input
-            type="password"
-            class="form-control"
-            name="password"
-            required
-            minlength="8"
-            title="Password must be at least 8 characters long"
-          />
+          <label for="body" class="form-label text-light mt-4"
+            >Description:</label>
 
-          <label for="avatar" class="form-label text-light mt-4"
-            >Avatar URL (optional):</label
-          >
-          <input type="url" class="form-control" id="avatar" name="avatar" />
+          <textarea type="body" class="form-control"  name="body" required maxlength="500" ></textarea>
 
-          <label for="banner" class="form-label text-light mt-4"
-            >Banner URL (optional):</label
-          >
-          <input type="url" class="form-control" id="banner" name="banner" />
+          <label for="tags" class="form-label text-light mt-4"
+          >Tags:</label>
+
+          <input type="text" class="form-control"  name="title" />
+
+          <label for="media" class="form-label text-light mt-4"
+          >Media:</label>
+
+          <input type="url" class="form-control"  name="media" />
 
           <button type="submit" class="btn btn-primary mb-4 mt-4">
-            Register
+            Update post
           </button>
         </form>
       </div>

@@ -16,4 +16,45 @@ body {
 #message {
   color: white;
 }
-/*# sourceMappingURL=index.css.map */
+
+.post {
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.post h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.post p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post .tags {
+  font-style: italic;
+  color: #007bff;
+}
+
+.post .created,
+.post .updated {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.post .count {
+  font-weight: bold;
+  color: white;
+}
