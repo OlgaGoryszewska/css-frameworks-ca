@@ -1,7 +1,10 @@
 import { updatePost } from "../api/auth/post/index.mjs";
 
-export function setLoginFormListener() {
+export function setEditPostListener() {
   const form = document.querySelector("#updatePost");
+
+  const url = new URL(location.href);
+  const id = url.searchParams.get("id");
 
   if (form) {
     form.addEventListener("submit", (event) => {
@@ -9,6 +12,7 @@ export function setLoginFormListener() {
       const form = event.target;
       const formData = new FormData(form);
       const post = Object.fromEntries(formData.entries());
+      post.id = id;
 
       updatePost(post);
     });
