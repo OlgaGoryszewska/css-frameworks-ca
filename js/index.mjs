@@ -1,6 +1,4 @@
-import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs";
-
+import * as listeners from "./handlers/index.mjs";
 import * as templates from "./templates/index.mjs";
 import * as postMethods from "./api/auth/post/index.mjs";
 
@@ -10,6 +8,10 @@ if (path === "/login/login.html") {
   setLoginFormListener();
 } else if (path === "/index.html") {
   setRegisterFormListener();
+} else if (path === "/post/create/index.html") {
+  setCreatePostListener();
+} else if (path === "/post/edit/index.html") {
+  setEditPostListener();
 }
 
 async function testTemplates() {
