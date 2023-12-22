@@ -1,6 +1,5 @@
 import { POSTS_API_URL } from "../../constants.mjs";
 import { authFetch } from "./authFetch.mjs";
-import { updatePost } from "./update.mjs";
 
 export async function getPosts() {
   const updatePostURL = `${POSTS_API_URL}`;

@@ -1,0 +1,19 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+:root {
+  --bs-body-font-family: "poppins";
+}
+
+body {
+  background-image: url("../../img/coding-owl-background-img-transparent.png");
+  background-color: #231f20;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+:root {
+  --bs-body-font-family: "poppins";
+}
+
+#message {
+  color: white;
+}
+/*# sourceMappingURL=index.css.map */
