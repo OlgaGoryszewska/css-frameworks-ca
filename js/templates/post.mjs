@@ -1,4 +1,4 @@
-export function postTemplateB(postData) {
+export function postTemplate(postData) {
   const post = document.createElement("div");
   post.classList.add("post");
   post.id = postData.id;
@@ -36,10 +36,10 @@ export function postTemplateB(postData) {
 }
 
 export function renderPostTemplate(postData, parent) {
-  parent.append(postTemplateB(postData));
+  parent.append(postTemplate(postData));
 }
 
 export function renderPostTemplates(postDataList, parent) {
-  const posts = postDataList.map((postData) => postTemplateB(postData));
+  const posts = postDataList.map((postData) => postTemplate(postData));
   parent.append(...posts);
 }

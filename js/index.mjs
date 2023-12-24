@@ -13,3 +13,10 @@ if (path === "/login/login.html") {
 } else if (path === "/post/create/index.html") {
   listeners.setCreatePostListener();
 }
+
+async function testTemplate() {
+  const posts = await postMethods.getPosts();
+  const container = document.querySelector("#post");
+  templates.renderPostTemplates(posts, container);
+}
+testTemplate();

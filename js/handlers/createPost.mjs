@@ -9,20 +9,26 @@ export function setCreatePostListener() {
   if (form) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
+      const submitForm = event.target;
+      const formData = new FormData(submitForm);
       const post = Object.fromEntries(formData.entries());
       post.id = id;
 
       try {
-        // Attempt to create the post
         await createPost(post);
-        // Handle the post creation success here (e.g., redirect, show success message)
+        // Handle success (e.g., redirect, show success message)
       } catch (error) {
-        // Handle the error here (e.g., display error message to the user)
         console.error("Error creating post:", error);
-        // Optionally, inform the user of the error
+        // Handle error (e.g., display error message)
       }
     });
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const newPostButton = document.querySelector("#newPostButton");
+
+  newPostButton.addEventListener("click", () => {
+    window.location.href = "../../post/create/index.html";
+  });
+});

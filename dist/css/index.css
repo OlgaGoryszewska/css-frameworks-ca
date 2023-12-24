@@ -49,12 +49,17 @@ body {
 
 .post .created,
 .post .updated {
-  font-size: 0.9em;
-  color: #888;
+  font-size: 1em;
+  color: #898;
   margin-bottom: 5px;
 }
 
 .post .count {
   font-weight: bold;
   color: white;
+}
+.navbar .navbar-nav .nav-link {
+  display: inline-block;
+  margin: 10px;
+  padding-left: 1rem;
 }
